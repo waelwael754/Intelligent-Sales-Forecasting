@@ -107,7 +107,7 @@ hr {
 @st.cache_data
 def load_data():
 
-    sales = pd.read_csv("cleaned_sales_data.csv")
+    sales = pd.read_csv("cleaned_sales_data.csv.gz", compression="gzip")
     forecast = pd.read_csv("future_forecast.csv")
 
     sales["InvoiceDate"] = pd.to_datetime(
